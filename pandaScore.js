@@ -1,17 +1,61 @@
+//dumping info - COD only - players, matches, series, tournaments, leagues - can pare down as we continue
 
-var test="https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/matches?filter[id]=590448&token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+var players = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/players?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
 
-var url='https://api.pandascore.co/lol/champions?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo'
+var leagues = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/leagues?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
 
-fetch(test)
-  .then(function (response) {
-      console.log(response)
-return response.json();
-//line 13 throwing errors - "unexpected end of input"
-   // return response.json();
-  }).then(function(data){
-    console.log(data)
-  })
-//   .then(function (data) {
-//     console.log(data);
-//   });
+var matches ="https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/matches?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+
+var series = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/series?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+
+var teams = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/teams?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+
+var tournaments = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/tournaments?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+
+fetch(players)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+});
+
+fetch(leagues)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+});
+
+fetch(matches)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+});
+
+fetch(series)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+});
+
+fetch(teams)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+});
+
+fetch(tournaments)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data);
+});

@@ -1,8 +1,13 @@
 let clientId  = "fti2cm1zr0bb6tuoqhmv9xjqa76e4s";
 let client_secret = "aj2ra5encuwosbtj8xa3yxxoq7dl3y";
 let token = "2nqlf1wjlmxxpcwluk90a1yd6a3xqv";
-let url = 'https://api.twitch.tv/helix/search/channels?query=callofduty&live_only=true';
+// let url = 'https://api.twitch.tv/helix/search/channels?query=callofduty&live_only=true';
+let url;
 
+let baseurl = "https://api.twitch.tv/helix/search/channels?query=";
+
+let listOfGames = document.getElementById('gameItems');
+let displayInfo = document.getElementById('placeInfo');
 
 //let auth="https://id.twitch.tv/oauth2/token?client_id=fti2cm1zr0bb6tuoqhmv9xjqa76e4s&client_secret=aj2ra5encuwosbtj8xa3yxxoq7dl3y&grant_type=client_credentials"
 
@@ -12,11 +17,14 @@ let url = 'https://api.twitch.tv/helix/search/channels?query=callofduty&live_onl
 
 
 function displayData(allData){
-    let displayInfo = document.getElementById('firstColumn');
+    while(displayInfo.hasChildNodes()){
+        displayInfo.removeChild((displayInfo.childNodes[0]));
+    }
+    
     for(let i=0;i<5;i++){
         let nameDisplayed = document.createElement('p');
         nameDisplayed.innerText = "NAMEDISPLAYED " + allData["data"][i]["display_name"];
-        let title = document.createElement('p');;
+        let title = document.createElement('p');
         title.textContent = "TITLE " + allData["data"][i]["title"];
         displayInfo.append(nameDisplayed);
         displayInfo.append(title);
@@ -26,16 +34,14 @@ function displayData(allData){
     }
 }
 
-
-
-
-fetch(url,{
-    method:"GET",
-    headers:{
-        'client-id':clientId,
-        'Authorization':`Bearer ${token}`
-    }
-})
+function GetInfo(){
+    fetch(url,{
+        method:"GET",
+        headers:{
+            'client-id':clientId,
+            'Authorization':`Bearer ${token}`
+        }
+    })
     .then(function(response){
         return response.json();
     })
@@ -46,6 +52,34 @@ fetch(url,{
         
     
     })
+}
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    url = baseurl + "callofduty&live_only=true"
+    GetInfo();
+
+   
+    });
+
+listOfGames.addEventListener('click', (e) => {
+    // if(e.target.value } === )
+    if(e.target.value === "COD"){
+        console.log(e.target.value);
+        url = baseurl + "callofduty&live_only=true";
+        GetInfo();
+
+    }
+    else if(e.target.value === "Volarant"){
+        url = baseurl +  "valorant&live_only=true"
+        GetInfo();
+    }
+    
+    
+});
 
 
 

@@ -13,25 +13,76 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 20px;
-    padding: 20px;
+    /* margin: 20px;
+    padding: 20px; */
+    background-image: linear-gradient(#fff, #cdfccc,#36414e)
 }
 
+/* the header */
 .jumbotron {
-    text-align: center;
+    text-align: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     flex-direction: column;
     border-bottom: #fff;
-    border-style: groove;
-    background-image: linear-gradient( #cdfdff, #fff)
+    /* border-style: groove; */
+    background-image: linear-gradient( #fff, #cdfdff);
+    color:#343542;    
 }
 
+.title{
+    color:rgb(80, 44, 243);
+}
+
+.underTitle{
+    color: darkred;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+/* basic container background */
 .container {
     text-align: left;
     display: flex;
     justify-content: left;
     align-items: left;
     flex-direction: column;
+}
+
+.firstColumn {
+    font-size: 24px;
+}
+
+/* the thournaments section */
+
+.tournaments {
+    justify-content: space-evenly;
+    flex:wrap;
+}
+
+.insideTourn {
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+}
+
+.inTeams {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: right;
+    align-items: right;
+}
+
+.dropbtn{
+
+}
+
+#sideColumn {
+    background-image: linear-gradient(#cdfdff,#cdfccc);
+    color: #343542;
+}
+
+#main {
+    background-image: linear-gradient(#cdfdff,#cdfccc);
 }

@@ -3,11 +3,53 @@
 var codTournaments = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/tournaments?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
 var valorantTournaments = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/valorant/tournaments?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
 
+
+
+
+var tournaments = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/tournaments?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+
+
+
+
+
+
+
+
+// fetch(teams)
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (data) {
+//   console.log(data);
+//   for(var i = 0; i < data.length; i++) {
+//     //for (var f = 0, f = )
+  
+//   console.log(data[i].players);
+//   }
+// });
+
+
+ 
+
+
+    // for( i = 0; i < data.length; i++){
+    //   var teams = data.teams[i]
+    // console.log("these are the teams, " + teams)
+    // var li = document.createElement("li");
+    // li.textContent = data[1].teams[i].name;
+    // teamList.appendChild(li);
+    // console.log(item)
+//   }}
+// })
+
+
+
 //fetching players names in tournaments
 fetch(codTournaments)
 .then(function (response) {
   return response.json();
 })
+
 .then(function (data) {
     console.log(data);
     var teamList = document.getElementById("team-list");

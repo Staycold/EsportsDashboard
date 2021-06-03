@@ -10,15 +10,15 @@
   <body>
   <section class="jumbotron">
     <h1 class="title">
-        Hello World
+        Esports tournament info!
       </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
+      <p class="underTitle">
+        For some of the <strong>most popular</strong> games!
       </p>
     <div class="container">
         <div class="columns">
             <div class="column is-12">
-              First column
+              🧊❄️A ColdGroup Production❄️🧊
             </div>
   </section>
   <div class="tile is-ancestor" id="main">
@@ -26,13 +26,21 @@
       <div class="tile">
         <div class="tile is-parent is-vertical is-9">
           <article class="tile is-child notification is-primary">
-            <p class="title">Vertical...</p>
-            <p class="subtitle">Top tile</p>
+            <!-- the dropdown menu -->
+            <p class="title" id="dropdownTitle">Choose a game</p>
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+                <a href="#">Call of Duty</a>
+                <a href="#">Valorant</a>
+                <a href="https://worldofwarcraft.com/en-us/character/us/skullcrusher/staycold">Staycold</a>
+              </div>
+            </div>
+            <div class="music">
+              
+            </div>
           </article>
-          <!-- <article class="tile is-child notification is-warning">
-            <p class="title">...tiles</p>
-            <p class="subtitle">Bottom tile</p>
-          </article> -->
+         
         </div>
         <div class="tile is-parent is 3">
           <article class="tile is-child notification is-info">
@@ -44,12 +52,21 @@
           </article>
         </div>
       </div>
+
+      <!-- tournament DIV -->
       <div class="tile is-parent is-full">
-        <article class="tile is-child notification is-danger">
+        <article class="tile is-child notification is-danger" class="tournaments">
+
           <p class="title">Wide tile</p>
           <p class="subtitle" id="recent-tournament">Aligned with the right tile</p>
+          <div class="insideTourn">
+            <p id="match-list"></p>
+          </div>
+          <div class="inTeams">
+          <p id="team-list"></p>
+          </div>
           <p id="teams">
-            <ul id="team-list"></ul>
+            <!-- <ul id="team-list"></ul> -->
           </p>
           <div class="content">
             <!-- Content -->
@@ -58,70 +75,31 @@
       </div>
     </div>
     <div class="tile is-parent is-3">
-      <article class="tile is-child notification is-success">
+      <article class="tile is-child notification is-success"  id="sideColumn">
         <div class="content">
-          <p class="title">Tall tile</p>
-          <p class="subtitle">With even more content</p>
-          <div class="content">
+          <p class="title">Streamer Info</p>
+          <div id="gameItems"></div>
+          <p class="subtitle"  id="firstColumn">content</p>
+          <div class="content"  id="fourthColumn">
             <!-- Content -->
           </div>
         </div>
       </article>
     </div>
   </div>
-  <!-- <section class="results">
-
-            <div class="column is-primary">
-              Second column
-              <div class="box">
-                <h1 class="title">
-                    Title, bitch. 
-                </h1>
-                <p class="title is-5">I can be the text in the description</p>
-            </div>
-              <div class="box">
-
-              </div>
-            </div>
-            <div class="column">
-              Third column
-              <div class="box">
-                  <h1 class="title">
-                      Title, bitch. 
-                  </h1>
-                  <p class="title is-5">I can be the text in the description</p>
-              </div>
-            </div>
-            <div class="column" id='fourtColumn'>
-              Fourth column
-              <div class="box is-parent">
-                <h1 class="title">
-                    Title, bitch. 
-                </h1>
-                <p class="title is-5">I can be the text in the description</p>
-            </div>
-            </div>
-          </div> -->
-          <!-- <div class="tile is-vertical">
-            <article class="tile is-child notification is-success">
-              <div class="content">
-                <p class="title">Tall tile</p>
-                <p class="subtitle">With even more content</p>
-                <div class="content"> -->
-                  <!-- Content -->
-                <!-- </div>
-              </div>
-      
-    </div>
-  </section> -->
+ 
 
   <script src="twitch.js"></script>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 
   <script src="userttv.js"></script>
 
 
-  <!-- <script src="pandaScore.js"></script> -->
 
+
+  <script src="pandaScore.js"></script>
+<footer class="signature">
+  🥶
+</footer>
   </body>
 </html>

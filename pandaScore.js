@@ -6,41 +6,27 @@ var tournaments = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co
 
 
 
-fetch(tournaments)
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
+
+
+
+
+
+=======
+// fetch(teams)
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (data) {
+//   console.log(data);
+//   for(var i = 0; i < data.length; i++) {
+//     //for (var f = 0, f = )
+  
+//   console.log(data[i].players);
+//   }
+// });
+
+
  
-  var mostRecent =  document.getElementById("recent-tournament");
-  mostRecent.innerHTML = data[1].teams[2].name;
-
-  var teamList = document.getElementById("team-list");
-  teamList.textContent = "Teams";
-  data.forEach(item=>teamNames(data));
-
-
-
-
-  function teamNames (streams) {
-    var names = []
-console.log(streams)
-    for( var i = 0; i < streams.length; i++){
-      var teams = streams[i].teams
-      
-      
-      for( let team of teams){
-        // console.log("the ",team)
-        names.push(team.name)
-      }
-      
-    }
-    // console.log(names)
-    return names ;
-
-
-
-  }
 
 
     // for( i = 0; i < data.length; i++){
@@ -52,3 +38,48 @@ console.log(streams)
     // console.log(item)
 //   }}
 })
+
+=======
+.then(function (data) {
+    console.log(data);
+    var teamList = document.getElementById("team-list");
+    teamList.textContent = "Teams in Tournament";
+    console.log(teamList)
+    let lengths = data[1]["teams"].length;
+    console.log(lengths);
+    for (let j = 0; j < data[1]["teams"].length; j++) {
+    var li = document.createElement("li");
+    teamList.appendChild(li);
+    li.textContent= data[1].teams[j].name;
+    }
+  });
+
+fetch (tournaments) 
+  .then(function (response) {
+    return response.json();
+  })
+  .then (function (data) {
+    console.log(data);
+    var matchList = document.createElement("ul");
+    var parentList = document.getElementById("match-list");
+    matchList.textContent = "Tournament Matches";
+    parentList.appendChild(matchList)
+    let matches = data[1]["matches"].length;
+    console.log(matches);
+    for (let j = 0; j < data[1]["matches"].length; j++) {
+      var li = document.createElement("li");
+      matchList.appendChild(li);
+      li.textContent= data[1].matches[j].begin_at;
+      }
+
+  })
+
+
+
+
+
+
+
+
+
+

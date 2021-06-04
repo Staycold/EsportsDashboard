@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Odibee+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kumbh+Sans:wght@700&family=Odibee+Sans&display=swap');
+
 :root {
     font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
     font-size: 16px;
@@ -8,6 +14,9 @@
 }
 
 .signature {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    font-size: 1rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -30,15 +39,89 @@
     background-image: linear-gradient( #fff, #cdfdff);
     color:#343542;    
 }
+  
 
-.title{
+
+/* this is the header bar and title */
+.jumboTitle{
     color:rgb(80, 44, 243);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3.7rem;
+    font-family:'Kumbh Sans', sans-serif;
+    
 }
 
 .underTitle{
     color: darkred;
     font-size: 2rem;
     margin-top: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+#utSpan{
+    
+
+}
+
+
+/* this is the Game selection container */
+
+#gameItems{
+    color: darkslategray;
+    cursor: pointer;
+    box-shadow:0 5px 10px 0 #631515;
+    font-weight: bolder;
+    font-size: 2rem;
+    background-image: linear-gradient(#9b8f20, #9bf2b9);
+}
+
+#dropdownTitle{
+    font-size: 3.5rem;
+    color: firebrick;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.dropdown-content:hover{
+    
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+.dropbtn{
+    background-image: linear-gradient(#9b8f20, #9bf2b9);
+
+}
+
+.dropbtn:hover{
+    cursor: pointer;
+    box-shadow:0 5px 10px 0 #631515;
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+
+
+/* this is the container with the IMG in it */
+#imgTile {
+    background-image: linear-gradient(#cdfdff,#374137,#473137);
+}
+
+.imgTitle {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    /* color: indianred; */
+    color: #631515;
+    font-family:'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
+}
+
+.isLive{
+    color: #631515;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    
 }
 
 /* basic container background */
@@ -54,35 +137,81 @@
     font-size: 24px;
 }
 
-/* the thournaments section */
+#gameImg {
+    border-radius: 0.8rem;
+}
 
-.tournaments {
-    justify-content: space-evenly;
-    flex:wrap;
+/* ================================================================the tournaments section =====================================================================*/
+
+#tourTile {
+    /* justify-content: space-evenly;
+    flex:wrap; */
+    background-image: linear-gradient(#473137, #6b1714, #631515, firebrick);
+}
+
+.tourneyTitle {
+    font-size: 2.8rem;   
+    /* color: rgb(48, 161, 156); */
+    color: rgb(208, 129, 228);
+    text-decoration: underline;
+    padding-bottom: 1rem;
+
+}
+
+.tourneyContent {
+    display: flex;   
+    justify-content: space-between;
+    align-items: left;
 }
 
 .insideTourn {
     align-items: center;
     justify-content: left;
     text-align: left;
+    /* color: blueviolet; */
+    font-size: 1.8rem;
+    color: #9bf2b9;
 }
 
 .inTeams {
-    flex-wrap: wrap;
-    align-items: center;
+    display: flex;    
+    align-items: right;
     justify-content: right;
     align-items: right;
+    color: #9bf2b9;
+    font-size: 1.7rem;
 }
 
-.dropbtn{
 
-}
+
+
+/* ===================================================this is the stream info styling====================================== */
 
 #sideColumn {
-    background-image: linear-gradient(#cdfdff,#cdfccc);
+    /* background-image: linear-gradient(#cdfdff,#cdfccc); */
+    background-image: linear-gradient(#cdfdff,#374137,#473137,#473137, #6b1714, #631515, firebrick);
     color: #343542;
 }
 
 #main {
     background-image: linear-gradient(#cdfdff,#cdfccc);
 }
+
+#selectorSpace {
+    background-image: linear-gradient(#cdfdff,#374137,#473137);
+    /* border: indigo;
+    border-style: solid;
+    border-radius: .3rem; */
+}
+
+.streamTitle {
+    font-size: 1.8rem;
+    color: #631515;
+    font-weight: bolder;
+
+}
+
+#placeInfo {
+    color: #9bf2b9;
+}
+

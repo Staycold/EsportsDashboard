@@ -23,19 +23,23 @@ fetch(url1,{
         
     })
 
-    let displayUser = document.getElementById('fourtColumn');
+    let displayUser = document.getElementById('fourthColumn');
 
     var displayOnline = function(data) {
         console.log(data["data"].length)
     if (data["data"].length > 0) {
-        let displayOn = document.createElement('p');
+        let displayOn = document.createElement('p')
+        // document.getElementById("onlineOffline").href="https://www.twitch.tv/";
         displayOn.innerText = 'Online'; 
         displayUser.append(displayOn);  
      }
      else {
-        let displayOff = document.createElement('p');
+        let displayOff = document.createElement('p')
+        document.getElementById("foruthColumn")    
         displayOff.innerText = 'Offline';
         displayUser.append(displayOff); 
+        
+        document.getElementById("twiLink").href = "https://www.twitch.tv/callofduty";  
      }
 
     }

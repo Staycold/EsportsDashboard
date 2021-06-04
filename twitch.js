@@ -29,6 +29,7 @@ var valorantTournaments = "https://cors-anywhere.herokuapp.com/https://api.panda
 let pandaScoreURl = "";
 
 var parentList = document.getElementById("match-list");
+var teamList = document.getElementById("team-list")
 
 // localStorage.clear();
 
@@ -39,9 +40,9 @@ function displayData(allData){
     
     for(let i=0;i<5;i++){
         let nameDisplayed = document.createElement('p');
-        nameDisplayed.innerText = "NAMEDISPLAYED " + allData["data"][i]["display_name"];
+        nameDisplayed.innerText =  allData["data"][i]["display_name"];
         let title = document.createElement('p');
-        title.textContent = "TITLE " + allData["data"][i]["title"];
+        title.textContent =  allData["data"][i]["title"];
         displayInfo.append(nameDisplayed);
         displayInfo.append(title);
         
@@ -139,14 +140,14 @@ function DisplayTeams(){
         })
         .then(function (data) {
             console.log(data);
-            parentList.textContent = "Teams in Tournament";
-            console.log(parentList);
+            teamList.textContent = "Teams in Tournament";
+            console.log(teamList);
             let lengths = data[0]["teams"].length;
             console.log(lengths);
             for (let j = 0; j < lengths; j++) {
                 var li = document.createElement("p");
                 li.textContent= data[1].teams[j].name;
-                parentList.appendChild(li);
+                teamList.appendChild(li);
             }
         });
 }
@@ -163,6 +164,7 @@ function DisplayDates(){
         console.log(data[0].matches[0].begin_at);
         // var matchList = document.createElement("p"); //change append lines to whatever we're using to append to the main file
         // parentList.appendChild(matchList);
+            parentList.textContent = "Tournaments:";
         for (let j = 0; j < data[0]["matches"].length; j++) {
             var li = document.createElement("li");
             li.textContent= data[0].matches[j].begin_at;

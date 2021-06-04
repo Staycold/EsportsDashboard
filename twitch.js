@@ -23,9 +23,9 @@ function displayData(allData){
     
     for(let i=0;i<5;i++){
         let nameDisplayed = document.createElement('p');
-        nameDisplayed.innerText = "NAMEDISPLAYED " + allData["data"][i]["display_name"];
+        nameDisplayed.innerText =  allData["data"][i]["display_name"];
         let title = document.createElement('p');
-        title.textContent = "TITLE " + allData["data"][i]["title"];
+        title.textContent =  allData["data"][i]["title"];
         displayInfo.append(nameDisplayed);
         displayInfo.append(title);
         

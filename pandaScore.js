@@ -74,7 +74,7 @@ fetch (codTournaments)
     console.log(data);
     var matchList = document.createElement("ul");
     var parentList = document.getElementById("match-list");
-    matchList.textContent = "Tournament Matches";
+    matchList.textContent = "Tournament Matches:";
     parentList.appendChild(matchList)
     let matches = data[1]["matches"].length;
     console.log(matches);
@@ -95,7 +95,7 @@ fetch (codTournaments)
   .then(function (data) {
       console.log(data);
       var teamList = document.getElementById("team-list");
-      teamList.textContent = "Teams in Tournament";
+      teamList.textContent = "Teams in Tournament:";
       console.log(teamList)
       let lengths = data[0]["teams"].length;
       console.log(lengths);

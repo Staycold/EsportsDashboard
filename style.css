@@ -6,7 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kumbh+Sans:wght@700&family=Odibee+Sans&display=swap');
 
-
 :root {
     font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
     font-size: 16px;
@@ -23,7 +22,6 @@
     flex-direction: column;
     /* margin: 20px;
     padding: 20px; */
-
     background-image: linear-gradient(#fff, #cdfccc,#36414e)
 }
 
@@ -36,7 +34,6 @@
     flex-direction: column;
     border-bottom: #fff;
     /* border-style: groove; */
-
     background-image: linear-gradient( #fff, #cdfdff);
     color:#343542;    
 }
@@ -62,10 +59,10 @@
     text-align: center;
 }
 
-#utSpan{
+/* #utSpan{
     
 
-}
+} */
 
 
 /* this is the Game selection container */
@@ -117,13 +114,10 @@
     color: #631515;
     font-family:'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
 }
-
-
 .isLive{
     color: #631515;
     font-size: 1.2rem;
     font-weight: bolder;
-
     
 }
 
@@ -135,7 +129,6 @@
     align-items: left;
     flex-direction: column;
 }
-
 
 .firstColumn {
     font-size: 24px;
@@ -159,24 +152,19 @@
     color: rgb(208, 129, 228);
     text-decoration: underline;
     padding-bottom: 1rem;
-
-
 }
 
-.tourneyContent {
+.tourneyContent{
     display: flex;   
     justify-content: space-between;
     align-items: left;
 }
-
-
 .insideTourn {
     align-items: center;
     justify-content: left;
     text-align: left;
     /* color: blueviolet; */
     font-size: 1.8rem;
-
     color: #9bf2b9;
 }
 
@@ -185,7 +173,6 @@
     align-items: right;
     justify-content: right;
     align-items: right;
-
     color: #9bf2b9;
     font-size: 1.7rem;
 }
@@ -205,17 +192,14 @@
 
 #selectorSpace {
     background-image: linear-gradient(#cdfdff,#374137,#473137);
-
     /* border: indigo;
     border-style: solid;
     border-radius: .3rem; */
 }
-
 .streamTitle {
     font-size: 1.8rem;
     color: #631515;
     font-weight: bolder;
-
 
 }
 

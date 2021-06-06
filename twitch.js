@@ -65,8 +65,14 @@ function displayData(allData){
     }
     
     for(let i=0;i<5;i++){
-        let nameDisplayed = document.createElement('p');
-        nameDisplayed.innerText =  allData["data"][i]["display_name"];
+        let nameDisplayed = document.createElement('a');
+        let brodcasterId = allData["data"][i]['broadcaster_login'];
+        console.log("yeeeeeeeer");
+        nameDisplayed.innerHTML =  allData["data"][i]["display_name"];
+        let blank = " target='_blank'";
+        nameDisplayed.setAttribute('href',"https://www.twitch.tv/" + brodcasterId);
+        nameDisplayed.setAttribute("target", "_blank");
+        
         let title = document.createElement('p');
         title.textContent =  allData["data"][i]["title"];
         displayInfo.append(nameDisplayed);
@@ -75,6 +81,9 @@ function displayData(allData){
         
         
     }
+
+    DetermineStatus();
+    PlaceImage()
 }
 
 function GetInfo(){
@@ -231,7 +240,7 @@ titleOfTournoments.addEventListener('click', (e) => {
 
 listOfGames.addEventListener('click', (e) => {
     // if(e.target.value } === )
-    console.log( "val" + e.target.value);
+    console.log( "val2" + e.target.value);
     if(e.target.value === "COD"){
         
         getGames = e.target.value;
@@ -250,10 +259,9 @@ listOfGames.addEventListener('click', (e) => {
         url1 = twitchURL + volarantID;
        
     }
+    console.log("ewbkudildflnxbc");
     if(e.target.value !== "Select"){
         GetInfo();
-        DetermineStatus();
-        PlaceImage()
     }
     
     

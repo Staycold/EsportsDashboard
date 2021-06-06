@@ -152,10 +152,9 @@
     color: rgb(208, 129, 228);
     text-decoration: underline;
     padding-bottom: 1rem;
-
 }
 
-.tourneyContent {
+.tourneyContent{
     display: flex;   
     justify-content: space-between;
     align-items: left;
@@ -177,8 +176,6 @@
     color: #9bf2b9;
     font-size: 1.7rem;
 }
-
-
 
 
 /* ===================================================this is the stream info styling====================================== */

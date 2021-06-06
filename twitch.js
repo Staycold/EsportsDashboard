@@ -170,15 +170,14 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function SendInfo(){
-    DisplayTeams(currentData);
-    DisplayDates(currentData);
-    console.log("helppppp mee");
-    DetermineStatus();
+    TypesOfTournoments();
+    setTimeout(DetermineStatus,1200);
     PlaceImage()
 
 }
 
 function TypesOfTournoments(){
+    pandaScoreURl = localStorage.getItem('pandaScoreURL');
     fetch(pandaScoreURl)
         .then(function (response) {
             return response.json();
@@ -196,6 +195,9 @@ function TypesOfTournoments(){
                 options.append(newOptions);
                 
             }
+
+            DisplayTeams(data);
+            DisplayDates(data);
         });
 }
 
@@ -249,7 +251,6 @@ listOfGames.addEventListener('click', (e) => {
        
     }
     if(e.target.value !== "Select"){
-        TypesOfTournoments();
         GetInfo();
         DetermineStatus();
         PlaceImage()
@@ -349,6 +350,46 @@ function DetermineStatus(){
     
         
 }
+
+
+let timePeriod = document.getElementById('timeperiod');
+
+timePeriod.addEventListener('click',(e) =>{
+    if(e.target.value === "Past"){
+
+        if(getGames === "COD"){
+            pandaScoreURl = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/tournaments/past?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+        }
+        else if(getGames === "Volarant"){
+            pandaScoreURl = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/valorant/tournaments/past?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+        }
+
+    }
+
+    else if(e.target.value === "Present"){
+        if(getGames === "COD"){
+            pandaScoreURl = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/tournaments/running?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+        }
+        else if(getGames === "Volarant"){
+            pandaScoreURl = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/valorant/tournaments/running?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+        }
+    }
+
+    else if(e.target.value === "Future"){
+        if(getGames === "COD"){
+            pandaScoreURl = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/codmw/tournaments/upcoming?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+            
+        }
+
+        else if(getGames === "Volarant"){
+            pandaScoreURl = "https://cors-anywhere.herokuapp.com/https://api.pandascore.co/valorant/tournaments/upcoming?token=_Sb6lpEcpdk-URomVTPLYWMJg3OTz9gQvy8sWyM3NcEhLMuyFyo"
+        }
+    }
+
+    localStorage.setItem('pandaScoreURL',pandaScoreURl);
+
+    TypesOfTournoments();
+})
 
 
 

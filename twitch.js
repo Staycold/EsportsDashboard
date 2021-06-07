@@ -240,8 +240,15 @@ titleOfTournoments.addEventListener('click', (e) => {
 
 listOfGames.addEventListener('click', (e) => {
     // if(e.target.value } === )
+
+    
+
+    
+
     console.log( "val2" + e.target.value);
     if(e.target.value === "COD"){
+
+        console.log("weeee hereeee");
         
         getGames = e.target.value;
         localStorage.setItem('games',getGames);
@@ -249,6 +256,12 @@ listOfGames.addEventListener('click', (e) => {
         pandaScoreURl = codTournaments;
         chosenGame = "callofduty"
         url1 = twitchURL + codID;
+
+
+        document.getElementById("main").classList.remove("main");
+        document.getElementById("main").classList.remove("main-valorant");
+        document.getElementById("main").classList.add("main-cod");
+        
     }
     else if(e.target.value === "Volarant"){
         getGames = e.target.value;
@@ -257,7 +270,12 @@ listOfGames.addEventListener('click', (e) => {
         pandaScoreURl = valorantTournaments;
         chosenGame = "valorant";
         url1 = twitchURL + volarantID;
-       
+
+        document.getElementById("main").classList.remove("main");
+        document.getElementById("main").classList.remove("main-cod");
+        document.getElementById("main").classList.add("main-valorant");
+        
+        
     }
     console.log("ewbkudildflnxbc");
     if(e.target.value !== "Select"){

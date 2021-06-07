@@ -131,6 +131,27 @@
     transform: scale(1.05);
 }
 
+
+.streamVideo {
+    display: flex;
+    align-items: right;
+    justify-content: space-around;
+    margin-right: 0;
+    float:right
+}
+
+
+.dropdownGameSelect {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+
+.selectorContents {
+    justify-content: space-between;
+}
+
 /* this is the container with the IMG in it */
 #imgTile {
     background-color: rgb(155, 153, 153, 0.66);

@@ -14,7 +14,7 @@
 }
 
 .is-ancestor {
-    min-height: 1000px;
+    min-height: 100vh;
 }
 
 .signature {

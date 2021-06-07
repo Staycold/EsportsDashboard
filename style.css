@@ -6,11 +6,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kumbh+Sans:wght@700&family=Odibee+Sans&display=swap');
 
+
 :root {
     font-family: 'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
 }
+
+.is-ancestor {
+    min-height: 1000px;
+}
+
 .signature {
     font-family: 'Indie Flower', cursive;
     font-weight: bolder;
@@ -20,10 +26,34 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* margin: 20px;
-    padding: 20px; */
-    background-image: linear-gradient(#fff, #cdfccc,#36414e)
+    background-image: linear-gradient(#fff, #48BFE3, #5390D9, #5E60CE, #7400B8, #6930C3);
+    color: #4ea8de;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
+.main {
+    background-image: url(./assets/big-esports-event.jpg);
+    background-size: cover;
+   
+}
+
+.main-cod {
+    background-image: url(./assets/wp5857206-call-of-duty-warzone-4k-wallpapers.jpg);
+    background-size: cover;
+    
+}
+
+.main-valorant {
+    background-image: url(./assets/VALORANT_YR1_ArticleHero_16_9.png);
+    background-size: cover;
+   
+}
+
+.tile-borders {
+    border-radius: 0.7rem;
+}
+
 
 /* the header */
 .jumbotron {
@@ -33,9 +63,8 @@
     align-items: left;
     flex-direction: column;
     border-bottom: #fff;
-    /* border-style: groove; */
-    background-image: linear-gradient( #fff, #cdfdff);
-    color:#343542;    
+    background-image: linear-gradient( #80FFDB, #72EFDD,#56CFE1, #48BFE3, #4EA8DE, #5390D9, #5E60CE, #6930C3, #7400B8);
+    color: #7400B8;    
 }
   
 
@@ -52,33 +81,47 @@
 }
 
 .underTitle{
-    color: darkred;
+    color: #80FFDB;
     font-size: 2rem;
-    margin-top: 1rem;
-    align-items: center;
+    margin-bottom: 1rem; 
     text-align: center;
 }
 
-/* #utSpan{
-    
-
-} */
+#utSpan{
+    color: #fb94ff;
+}
 
 
 /* this is the Game selection container */
 
-#gameItems{
-    color: darkslategray;
+.game-chooser {
+    display: flex;
+    
+}
+
+.gameItems{
+    color: #7400B8;
     cursor: pointer;
-    box-shadow:0 5px 10px 0 #631515;
+    box-shadow:0 5px 10px 0 #f72585;
     font-weight: bolder;
     font-size: 2rem;
-    background-image: linear-gradient(#9b8f20, #9bf2b9);
+    background-image: linear-gradient(#80FFDB, #72EFDD,#56CFE1, #48BFE3);
 }
+
+.gameItems:hover {
+    cursor: crosshair;
+    transition: all 1.5s;
+    box-shadow: inset 0 0 0.3rem 0.3rem #f72585;
+}
+
+#currentTournos {
+    max-width: 25rem;
+}
+
 
 #dropdownTitle{
     font-size: 3.5rem;
-    color: firebrick;
+    color: #27fdf5;
     font-family: 'Odibee Sans', cursive;
 }
 
@@ -88,36 +131,24 @@
     transform: scale(1.05);
 }
 
-.dropbtn{
-    background-image: linear-gradient(#9b8f20, #9bf2b9);
-
-}
-
-.dropbtn:hover{
-    cursor: pointer;
-    box-shadow:0 5px 10px 0 #631515;
-    transition: transform 150ms;
-    transform: scale(1.05);
-}
-
-
-
 /* this is the container with the IMG in it */
 #imgTile {
-    background-image: linear-gradient(#cdfdff,#374137,#473137);
+    background-color: rgb(155, 153, 153, 0.66);
 }
 
 .imgTitle {
     font-size: 1.6rem;
     font-weight: bolder;
-    /* color: indianred; */
-    color: #631515;
+    color: #27fdf5;
     font-family:'Noto Sans TC', sans-serif, 'Open Sans', sans-serif;
 }
+
+
 .isLive{
-    color: #631515;
+    color: #27fdf5;
     font-size: 1.2rem;
     font-weight: bolder;
+
     
 }
 
@@ -130,6 +161,7 @@
     flex-direction: column;
 }
 
+
 .firstColumn {
     font-size: 24px;
 }
@@ -141,31 +173,31 @@
 /* ================================================================the tournaments section =====================================================================*/
 
 #tourTile {
-    /* justify-content: space-evenly;
-    flex:wrap; */
-    background-image: linear-gradient(#473137, #6b1714, #631515, firebrick);
+    background-color: rgb(155, 153, 153, 0.66)
 }
 
 .tourneyTitle {
     font-size: 2.8rem;   
-    /* color: rgb(48, 161, 156); */
-    color: rgb(208, 129, 228);
+    color:#27fdf5;
     text-decoration: underline;
     padding-bottom: 1rem;
+
+
 }
 
-.tourneyContent{
+.tourneyContent {
     display: flex;   
     justify-content: space-between;
     align-items: left;
 }
+
+
 .insideTourn {
     align-items: center;
     justify-content: left;
     text-align: left;
-    /* color: blueviolet; */
     font-size: 1.8rem;
-    color: #9bf2b9;
+    color: #27fdf5;
 }
 
 .inTeams {
@@ -173,7 +205,7 @@
     align-items: right;
     justify-content: right;
     align-items: right;
-    color: #9bf2b9;
+    color: #27fdf5;
     font-size: 1.7rem;
 }
 
@@ -181,29 +213,24 @@
 /* ===================================================this is the stream info styling====================================== */
 
 #sideColumn {
-    /* background-image: linear-gradient(#cdfdff,#cdfccc); */
-    background-image: linear-gradient(#cdfdff,#374137,#473137,#473137, #6b1714, #631515, firebrick);
+    background-color: rgb(155, 153, 153, 0.66);
     color: #343542;
 }
 
-#main {
-    background-image: linear-gradient(#cdfdff,#cdfccc);
+#selectorSpace {
+    background-color: rgb(155, 153, 153, 0.66);
 }
 
-#selectorSpace {
-    background-image: linear-gradient(#cdfdff,#374137,#473137);
-    /* border: indigo;
-    border-style: solid;
-    border-radius: .3rem; */
-}
 .streamTitle {
     font-size: 1.8rem;
-    color: #631515;
+    color: #27fdf5;
     font-weight: bolder;
-
 }
 
 #placeInfo {
-    color: #9bf2b9;
+    color: #27fdf5;
 }
 
+#stream-info-container, #tourney-container {
+    margin-bottom: 0;
+}

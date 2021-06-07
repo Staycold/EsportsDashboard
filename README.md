@@ -14,5 +14,5 @@ we hope you enjoy it as much as we do!
 
 <h1> Ready Project 1 </h1>
 
-  https://staycold.github.io/Project1/
+  https://staycold.github.io/EsportsDashboard/
  
